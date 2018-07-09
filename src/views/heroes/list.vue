@@ -35,7 +35,7 @@
 
 <script>
 //引入 axios
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
     data() {
@@ -50,7 +50,7 @@ export default {
     methods: {
         // 查询 显示界面
         loadData() {
-            axios
+            this.$http
                 .get('http://localhost:3000/heroes')
                 .then((res)=>{
                     const {status, data} = res
@@ -65,7 +65,7 @@ export default {
             if (!confirm('确定删除么')) {
                 return
             }
-            axios
+            this.$http
                 .delete(`http://localhost:3000/heroes/${id}`)
                 .then((res)=>{
                     if (res.status === 200) {

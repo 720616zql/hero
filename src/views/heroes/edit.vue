@@ -17,7 +17,7 @@
 
 <script>
 // 1  添加 绑定文本 v-model   2 绑定添加事件 3  发送请求
-import axios from 'axios'
+// import axios from 'axios'
 export default {
     data() {
         return {
@@ -36,7 +36,7 @@ export default {
     },
     methods:{
        loadData(){
-           axios
+           this.$http
               .get(`http://localhost:3000/heroes/${this.heroId}`)
               .then((res)=>{
                   if (res.status === 200) {
@@ -45,7 +45,7 @@ export default {
               })
        },
        handleEdit() {
-            axios
+            this.$http
             .put(`http://localhost:3000/heroes/${this.heroId}`, this.formData)
             .then((res)=>{
                 if (res.status === 200) {

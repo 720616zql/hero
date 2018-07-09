@@ -7,7 +7,9 @@ import router from './routes/router'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './assets/css/index.css'
 
+import MyAxios from './plugins/myaxios'
 
+Vue.use(MyAxios)
 
 new Vue({
   el: '#app',

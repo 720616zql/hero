@@ -12,7 +12,8 @@ import HeroEdit from '../views/heroes/edit.vue'
 //注册插件
 Vue.use(VueRouter)
 const router = new VueRouter({
-    linkExactActiveClass: 'active',  
+    // linkExactActiveClass: 'active', 
+    linkActiveClass: 'active',
     routes: [
         // 路由规则
         { name: 'home', path:'/', redirect:{name:'heroes'}},
